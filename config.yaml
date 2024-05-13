@@ -1,0 +1,26 @@
+global: 
+  configurator_auth: !secret configurator_auth
+apps:
+  hue_light_switches:
+    - profile_name: brians_switch_daytime
+      switch_name: brian_s_room_switch
+      start_time: '7:00'
+      end_time: '23:00'
+      lights:
+        - light_id: light.brian_floor_lamp
+          brightness: 255
+        - light_id: light.brian_shade_lamp
+          brightness: 255
+        - light_id: light.brian_shade_lamp_2
+          brightness: 255
+    - profile_name: brians_switch_nighttime
+      switch_name: brian_s_room_switch
+      start_time: '23:00'
+      end_time: '7:00'
+      lights:
+        - light_id: light.brian_floor_lamp
+          brightness: 128
+        - light_id: light.brian_shade_lamp
+          brightness: 128
+        - light_id: light.brian_shade_lamp_2 
+          brightness: 128
